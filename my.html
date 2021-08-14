@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>关于我</title>
+<link rel="stylesheet" href="style/css/admin.css">
+</head>
+
+<body>
+<!--头部 导航-->
+<header>
+	<ul>
+    	<li><a>登录</a></li>
+    </ul>
+</header>
+<nav class="nav">
+	<div>
+    	<h1>小黄老师的博客</h1>
+      <ul>
+        <a href="index.html">主页</a>
+          <a href="mulu.html">拽姐恋爱史</a>
+          <a href="tupian.html">特效照片墙</a>
+          <a href="my.html" class="on">关于我</a>
+          <a href="jieshao.html">我的足迹</a>
+          <a href="lyb.html">留言板</a>
+      </ul>
+    </div>
+</nav>
+<main class="clear" style="padding:20px 0">
+<section class="mainLeft">
+        <section class="leftbg">
+        <h1 class="perdata">个人资料</h1>
+        <div class="leftimg">
+            <img src="style/images/tx.jpg">
+            <h1><embed src="style/1.svg" width="35" height="35" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" /><i>黄荔</i></h1>
+            <ul>
+                <li>专业：心理学</li>
+                <li>学校：成都师范学院</li>
+                <li>入学年份：2018年</li>
+                <li>年龄：21</li>
+                <li>性别：仙女</li>
+                
+            </ul>
+        </div>
+    </section>
+
+</section>
+    
+    
+<section class="mainRgiht">
+    <section class="rightbg">
+        <h1 class="perdata">我的档案</h1>
+       <div class="record">
+       		<dl>
+            	<dt>基本信息：</dt>
+                <dd><input value="黄荔" disabled></dd>
+            </dl>
+            
+            <dl>
+            	<dt>个人简介：</dt>
+                <dd>2000 05 06 21岁，是个十足的仙女，喜欢唱歌，散步，参加过很多志愿活动，热爱志愿这份工作，理想的职业是老师，人生三大愿望:身边人幸福、天天开心、和阳哥结婚，拿手好菜：青椒肉丝，擅长运动：...</dd>
+            </dl>  
+            <dl>
+            	<dt>认证类型：</dt>
+                <dd><input value="大陆身份证" disabled></dd>
+            </dl> 
+            <ul>编辑</ul> 
+       </div>
+       
+    </section>
+    <section class="rightbg">
+        <a class="perdata" href="lyb.html">人生格言</a>
+       <div class="lemess">
+ 			<p>保重千千万</p>
+       </div>
+    </section>
+</section>
+</main>
+<!--脚底 版权-->
+<footer class="footerImg">
+    <div>
+        <p>©2021 - 版权所有 计科技1801 李阳</p>
+    </div>
+</footer>
+<script src="style/js/jquery.js"></script>
+<script>
+$(document).ready(function(e) {
+    $('.record ul').click(function(e) {
+		
+        if($(this).text()=="编辑"){
+			$('.record input').prop("disabled",false);
+			$(this).text("保存");
+		}else{
+			$('.record input').prop("disabled",true);
+			$(this).text("编辑");	
+		}
+    });
+});
+</script>
+</body>
+</html>

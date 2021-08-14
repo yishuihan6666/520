@@ -1,0 +1,201 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>足迹</title>
+<link rel="stylesheet" href="style/css/admin.css">
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+
+    #employeeTable {
+        width: 1000px;
+        margin: 20px auto;
+        font-size: 20px;
+        background-color: rgba(184, 248, 168,.5);
+    }
+
+    #employeeTable,
+    #employeeTable tr,
+    #employeeTable th,
+    #employeeTable td {
+        border: 2px solid pink;
+        line-height: 40px;
+    }
+
+    #formDiv {
+        border: 2px solid pink;
+        width: 500px;
+        text-align: center;
+        margin: 50px auto;
+        font-size: 20px;
+        background-color: rgba(184, 248, 168,.5);
+    }
+    .standard{
+        background-color: rgba(186, 189, 201, 0.5);
+        padding: 30px;
+        width: 1000px;
+        margin-bottom: 40px;
+    }
+    input{
+        width: 300px;
+        height: 40px;
+    }
+</style>
+<script>
+    window.onload = function () {
+        // 创建一个函数，方便调用
+        function addclick() {
+            // 获取姓名、邮箱、工资
+            var name = document.getElementById('empName').value;
+            var email = document.getElementById('email').value;
+            var salary = document.getElementById('salary').value;
+            // 创建表格行tr，添加到表格
+            var delTr = document.createElement('tr');
+            // 获取表格
+            var table = document.getElementById('employeeTable');
+            // 根据表格获取tbody，方便把tr放入tbody中，浏览器便于识别
+            var tbody = table.getElementsByTagName('tbody')[0];
+            // 直接用innerHTMl设置新加的tr的内容
+            delTr.innerHTML = " <td>" + name + "</td> <td>" + email + "</td> <td>" + salary + "</td> <td>" + "<a>Delete</a> " + "</td> ";
+            // 获取新加的表格行里的a元素，方便待会使用，改超链接地址等等
+            var newA=delTr.getElementsByTagName('a')[0];
+            // 获取所有的a元素，计算长度，赋值给index，改地址用
+            var allA = document.getElementsByTagName('a');
+            var index=allA.length
+            newA.href='deleteEmp?id=00'+(index+1);
+            // 把新增tr赋值给tbody
+            tbody.appendChild(delTr);
+
+            /*
+            for循环会在页面加载完成之后立即执行,而响应函数会在超链接被点击时才执行当响应函数执行时,for循环早已执行完毕
+            所以不能用allA[i],响应函数里的allA[i]=3,用this就可以
+            */
+            for (var i = 0; i < allA.length; i++) {
+                allA[i].onclick = function () {
+                    var deltr = this.parentNode.parentNode;
+                    var namep = deltr.getElementsByTagName('td')[0].innerHTML;
+                    if (confirm('确定删除'+namep+'的信息吗')) {
+                        deltr.parentNode.removeChild(deltr);
+                    }
+                    return false;
+                }                  
+            }
+               
+        }
+        // 获取提交按钮
+        var addbtn = document.getElementById('addEmpButton');
+        // 调用点击函数
+        addbtn.onclick = addclick;
+        var allA = document.getElementsByTagName('a');
+        for (var i = 0; i < allA.length; i++) {
+            // delete键点击事件
+            allA[i].onclick = function () {
+                var deltr = this.parentNode.parentNode;
+                var name = deltr.getElementsByTagName('td')[0].innerHTML;
+                if (confirm('确定删除' + name + '的信息吗')) {
+                    deltr.parentNode.removeChild(deltr);
+                }
+                return false;
+            }
+        }
+    }
+</script>
+</head>
+
+<body>
+<!--头部 导航-->
+<header>
+	<ul>
+    	<li><a>登录</a></li>
+    </ul>
+</header>
+<nav class="nav">
+	<div>
+    	<h1>小黄老师的博客</h1>
+      <ul>
+        <a href="index.html">主页</a>
+          <a href="mulu.html">拽姐恋爱史</a>
+          <a href="tupian.html">特效照片墙</a>
+          <a href="my.html">关于我</a>
+          <a href="jieshao.html" class="on">我的足迹</a>
+          <a href="lyb.html">留言板</a>
+      </ul>
+    </div>
+</nav>
+<main class="clear" style="padding:20px 0">
+<section class="standard">
+    <table id="employeeTable">
+        <tr>
+            <th>打卡地</th>
+            <th>心得</th>
+            <th>日期</th>
+            <th>&nbsp;</th>
+        </tr>
+
+        <tr>
+            <td>宜宾</td>
+            <td>玩的第一个城市，也是最特殊的一个城市~</td>
+            <td>2019-08-29</td>
+            <td><a href="deleteEmp?id=001">Delete</a></td>
+        </tr>
+
+        <tr>
+            <td>乐山</td>
+            <td>最好吃的一个城市，也是两百天纪念日~</td>
+            <td>2019-12-4</td>
+            <td><a href="deleteEmp?id=002">Delete</a></td>
+        </tr>
+
+        <tr>
+            <td>都江堰</td>
+            <td> 印象最好的城市，山美水美我更美~</td>
+            <td>2020-1-13</td>
+            <td><a href="deleteEmp?id=003">Delete</a></td>
+        </tr>
+    </table>
+
+    <div id="formDiv">
+        <h4>添加新足迹</h4>
+
+        <table style="text-align: center; padding-left: 50px;line-height: 50px;">
+            <tr>
+                <td class="word">打卡地: </td>
+                <td class="inp">
+                    <input type="text" name="empName" id="empName" />
+                </td>
+            </tr>
+            <tr>
+                <td class="word">心得: </td>
+                <td class="inp">
+                    <input type="text" name="email" id="email" />
+                </td>
+            </tr>
+            <tr>
+                <td class="word">日期: </td>
+                <td class="inp">
+                    <input type="text" name="salary" id="salary" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <button id="addEmpButton" value="abc" style="width: 80px; height: 30px; margin: 0 auto;">添加</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+</section>
+</main>
+<!--脚底 版权-->
+<footer class="footerImg">
+    <div>
+        <p>©2021 - 版权所有 计科技1801 李阳</p>
+    </div>
+</footer>
+<script src="style/js/jquery.js"></script>
+</body>
+</html>

@@ -1,0 +1,336 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>特效库</title>
+  <link rel="stylesheet" href="style/css/admin.css">
+  <style>
+    html {
+      perspective: 800px;
+      /* 开启浏览器视距为800px */
+    }
+
+    .mainRgiht .outer {
+      width: 200px;
+      height: 200px;
+      /* margin: 100px auto; */
+      left: 50px;
+      top: 50px;
+      position: relative;
+      transform-style: preserve-3d;
+      /* 开启浏览器的3D效果 */
+      animation: rotate 10s linear infinite;
+      /* 引用关键帧动画 */
+    }
+    .mainRgiht .outer:hover{
+      animation: rotate 3s linear infinite;
+    }
+    .mainRgiht .outer div {
+      position: absolute;
+      opacity: 70%;
+    }
+
+    .mainRgiht .outer div img {
+      width: 200px;
+      height: 200px;
+      vertical-align: top;
+      /* 设置图片基线顶部对齐 */
+    }
+    .mainRgiht .outer1 {
+      width: 200px;
+      height: 200px;
+      /* margin: 100px auto; */
+      position: relative;
+      left: 450px;
+      top: -120px;
+      transform-style: preserve-3d;
+      /* 开启浏览器的3D效果 */
+      animation: rotate 10s linear infinite;
+      /* 引用关键帧动画 */
+    }
+    .mainRgiht .outer1:hover{
+      animation: rotate 3s linear infinite;
+    }
+    .mainRgiht .outer1 div {
+      position: absolute;
+      opacity: 70%;
+    }
+
+    .mainRgiht .outer1 div img {
+      width: 200px;
+      height: 200px;
+      vertical-align: top;
+      /* 设置图片基线顶部对齐 */
+    }
+
+    .mainRgiht .box1 {
+      transform: rotateY(90deg) translateZ(100px);
+    }
+
+    .mainRgiht .box2 {
+      transform: rotateY(-90deg) translateZ(100px);
+    }
+
+    .mainRgiht .box3 {
+      transform: rotatex(90deg) translateZ(100px);
+    }
+
+    .mainRgiht .box4 {
+      transform: rotatex(-90deg) translateZ(100px);
+    }
+
+    .mainRgiht .box5 {
+      transform: rotateY(0deg) translateZ(100px);
+    }
+
+    .mainRgiht .box6 {
+      transform: rotateY(180deg) translateZ(100px);
+    }
+
+    /* 设置关键帧动画 */
+    @keyframes rotate {
+      from {
+        transform: rotateX(0) rotateZ(0);
+      }
+
+      to {
+        transform: rotateX(1turn) rotateZ(1turn);
+      }
+    }
+
+    .bbox1 {
+      height: 800px;
+      overflow: hidden;
+      /* margin-left: 30px; */
+      background: linear-gradient(to bottom ,white,pink);
+
+      text-align: center;
+    }
+
+    .bbox1 div {
+      float: left;
+      margin-right: 8px;
+    }
+
+    .bbbox2 {
+      width: 85px;
+      height: 85px;
+      border-radius: 50%;
+      margin: 0 auto;
+      animation: XQ 5s infinite;
+      overflow: hidden;
+      background-image: url(./style/images/lbt/7.jpg);
+    }
+
+    .bbox3 {
+      width: 85px;
+      height: 85px;
+      border-radius: 50%;
+      margin: 0 auto;
+      animation: XQ 5s 0.1s infinite;
+      background-image: url(./style/images/lbt/21.jpg);
+      background-size: cover;
+    }
+
+    .bbox4 {
+      width: 85px;
+      height: 85px;
+      border-radius: 50%;
+      background-color: yellow;
+      margin: 0 auto;
+      animation: XQ 5s 0.2s infinite;
+      background-image: url(./style/images/lbt/22.jpg);
+      background-size: cover;
+    }
+
+    .bbox5 {
+      width: 85px;
+      height: 85px;
+      border-radius: 50%;
+      background-color: green;
+      margin: 0 auto;
+      animation: XQ 5s 0.3s infinite;
+      background-image: url(./style/images/lbt/23.jpg);
+      background-size: cover;
+    }
+
+    .bbox6 {
+      width: 85px;
+      height: 85px;
+      border-radius: 50%;
+      background-color: yellowgreen;
+      margin: 0 auto;
+      animation: XQ 5s 0.4s infinite;
+      background-image: url(./style/images/lbt/24.jpg);
+      background-size: cover;
+    }
+
+    .bbox7 {
+      width: 85px;
+      height: 85px;
+      border-radius: 50%;
+      background-color: blue;
+      margin: 0 auto;
+      animation: XQ 5s 0.5s infinite;
+      background-image: url(./style/images/lbt/25.jpg);
+      background-size: cover;
+    }
+
+    .bbox8 {
+      width: 85px;
+      height: 85px;
+      border-radius: 50%;
+      background-color: violet;
+      margin: 0 auto;
+      animation: XQ 5s 0.6s infinite;
+      background-image: url(./style/images/lbt/26.jpg);
+      background-size: cover;
+    }
+
+    .bbox9 {
+      width: 85px;
+      height: 85px;
+      border-radius: 50%;
+      background-color: pink;
+      margin: 0 auto;
+      animation: XQ 5s 0.7s infinite;
+      background-image: url(./style/images/lbt/27.jpg);
+      background-size: cover;
+    }
+
+    .bbox10 {
+      width: 85px;
+      height: 85px;
+      border-radius: 50%;
+      background-color: rgb(77, 8, 31);
+      margin: 0 auto;
+      animation: XQ 5s 0.8s infinite;
+      background-image: url(./style/images/lbt/11.jpg);
+      background-size: cover;
+    }
+
+    @keyframes XQ {
+      0% {
+        margin-top: 0;
+      }
+
+      /* 可以多设置几段变化点 */
+      
+
+      50% {
+        margin-top: 715px;
+      }
+
+      100% {
+        margin-top: 0px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!--头部 导航-->
+  <header>
+    <ul>
+      <li><a>登录</a></li>
+    </ul>
+  </header>
+  <nav class="nav">
+    <div>
+      <h1>小黄老师的特效库</h1>
+      <ul>
+        <a href="index.html">主页</a>
+        <a href="mulu.html">拽姐恋爱史</a>
+        <a href="tupian.html" class="on">特效照片墙</a>
+        <a href="my.html">关于我</a>
+        <a href="jieshao.html">我的足迹</a>
+        <a href="lyb.html">留言板</a>
+      </ul>
+    </div>
+  </nav>
+  <main class="clear" style="padding:20px 0">
+    <section class="mainLeft">
+      <section class="leftbg">
+        <h1 class="perdata">特效相册</h1>
+        <div class="swiper-container swiper-lbt">
+          <div class="swiper-slide"><img src="style/images/lbt/1.jpg" class="widht100"></div>
+        </div>
+      </section>
+    </section>
+
+
+    <section class="mainRgiht">
+      <section class="rightbg">
+        <h1 class="perdata">最新图片</h1>
+        <div class="uuu">
+          <ul class="clear">
+            <div class="outer">
+              <div class="box1">
+                <img src="./pictrue/10img/1.JPG">
+              </div>
+              <div class="box2">
+                <img src="./pictrue/10img/2.JPG">
+              </div>
+              <div class="box3">
+                <img src="./pictrue/10img/3.JPG">
+              </div>
+              <div class="box4">
+                <img src="./pictrue/10img/4.JPG">
+              </div>
+              <div class="box5">
+                <img src="./pictrue/10img/5.JPG">
+              </div>
+              <div class="box6">
+                <img src="./pictrue/10img/6.JPG">
+              </div>
+            </div>
+            <div class="outer1">
+              <div class="box1">
+                <img src="./style/images/lbt/35.jpg">
+              </div>
+              <div class="box2">
+                <img src="./style/images/lbt/31.jpg">
+              </div>
+              <div class="box3">
+                <img src="./style/images/lbt/32.jpg">
+              </div>
+              <div class="box4">
+                <img src="./style/images/lbt/33.jpg">
+              </div>
+              <div class="box5">
+                <img src="./style/images/lbt/34.jpg">
+              </div>
+              <div class="box6">
+                <img src="./style/images/lbt/36.jpg">
+              </div>
+            </div>
+            <div class="bbox1">
+              <div class="bbox2">
+              </div>
+              <div class="bbox3"></div>
+              <div class="bbox4"></div>
+              <div class="bbox5"></div>
+              <div class="bbox6"></div>
+              <div class="bbox7"></div>
+              <div class="bbox8"></div>
+              <div class="bbox9"></div>
+              <div class="bbox10"></div>
+          </div>
+          </ul>
+        </div>
+      </section>
+      <input type="button" value="<上一页" align=center onclick="back()">
+      <input type="button" value="下一页>" align=center onclick="back()">
+    </section>
+  </main>
+  <!--脚底 版权-->
+  <footer class="footerImg">
+    <div>
+      <p>©2021 - 版权所有 计科技1801 李阳</p>
+    </div>
+  </footer>
+  <script src="style/js/jquery.js"></script>
+</body>
+
+</html>

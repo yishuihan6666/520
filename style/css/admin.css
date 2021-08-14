@@ -1,0 +1,143 @@
+﻿@charset "utf-8";
+/* CSS 重置 */
+*{padding:0; margin:0; list-style:none}
+a{ text-decoration:none;}
+
+i{font-style:normal}
+body{   background-color: pink; font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif; font-size:12px;}
+html,body{height:100%; width:100%}
+.widht100{width:100%; display:block}
+main{width:1100px; margin:0 auto}
+.clear::after{content:".";display:block;height:0;clear:both;visibility:hidden}
+.bggrey{background:#f5f5f5}
+
+.on{
+	color: red !important;
+}
+
+
+
+
+/*脚步*/
+.footer{ position:fixed; bottom:0; left:0; width:100%}
+.footer div{height:70px; background:#f5f5f5; text-align:center; color:#666666;}
+.footer div p{line-height:2.3}
+.footerImg div{padding:10px; background:#f5f5f5; text-align:center; color:#666666;}
+.footerImg div p{line-height:2.3}
+
+
+
+header{background:rgba(245,245,245,1.00); height:30px}
+header ul{width:1100px; line-height:30px; text-align:right; margin:0 auto}
+header ul li{display:inline-block; padding:0 10px}
+header ul li a{color:#000}
+header ul li a:hover{color:red}
+.nav{height:300px; width:1100px; margin:0 auto; background:url(../images/banner.jpg) left top no-repeat; background-size:cover; position:relative}
+
+.nav div{position:absolute; right:80px; bottom:30px}
+.nav div h1{color:#F0FFF0; font-size:34px; padding:20px; animation:qysn 2s infinite ease-in-out}
+@keyframes qysn{
+	0%{transform:scale(1) rotate(-10deg)}
+	100%{transform:scale(1.1) rotate(10deg)}	
+}
+.nav div a{color:#FFFFFF; padding:0 10px; color:#FFFFFF; font-size:18px}
+.nav div a:hover{text-decoration:underline}
+
+.mainLeft{float:left; width:295px;}
+.leftbg{ border:1px solid rgba(71,71,71,0.5); border-right:2px solid #cccc99; background:#FFFFF0; margin:20px 0}
+.mainRgiht{float:right; width:790px; }
+.rightbg{ border:1px solid rgba(71,71,71,0.5); border-left:2px solid #cccc99; background:#FFFFF0; margin:20px 0}
+.perdata{height:26px; color:#333333; font-size:15px; line-height:26px; padding-left:10px; background:#EEE8AA;display: block;}
+.leftimg{padding:10px}
+.leftimg img{width:100%; cursor:pointer; transition:all 0.5s ease-in}
+.leftimg img:hover{transform:rotate(360deg) scale(1.5,1.5)}
+.leftimg h1{color:#333333; text-align:center; font-size:14px; padding:8px; display:flex; justify-content:center; align-items:center}
+.leftimg ul{padding:8px}
+.leftimg ul li{color:#333333; font-size:14px; line-height:28px}
+.synopsis{text-indent:26px; line-height:2; padding:10px}
+
+#banner {position: relative; width: 100%; height: 286px;overflow: hidden; }
+#banner_list img { height:286px; display:block; width:100%; margin:0 auto}
+#banner_bg { position: absolute; bottom: 0; background-color: #000; height: 30px; opacity: 0.3; z-index: 1000; cursor: pointer; width: 478px; }
+#banner_info { position: absolute; bottom: 0; left: 5px; height: 22px; color: #fff; z-index: 1001; cursor: pointer }
+#banner_text { position: absolute; width: 120px; z-index: 1002; right: 3px; bottom: 3px; }
+#banner ul { position: absolute; list-style-type: none;  opacity: 0.8; z-index: 1002; margin: 0; padding: 0; bottom: 3px; right: 5px; }
+#banner ul li { padding: 0px 8px; float: left; display: block; color: #FFF; background: #6f4f67; cursor: pointer; border: 1px solid #333; }
+#banner ul li.on { background-color: #000; }
+#banner_list a { position: absolute; }
+#banner_list{height:286px}
+
+.blogp{padding:20px;margin-bottom:15px; border-bottom:1px dashed #5E74B0}
+.blogp h1{font-size:18px; padding:10px 0}
+.blogp h1 a{color:#094382}
+.blogp p{font-size:14px; color:#323e32; line-height:2; padding-bottom:15px}
+.blogp img{width:100%}
+.record{margin:10px; padding:10px}
+.record dt{color:#637160; font-size:15px; line-height:3}
+.record dd{line-height:3}
+.record dd input:disabled{background:rgba(0,0,0,0); border:none}
+.record ul{text-align:center; width:85px; height:28px; line-height:28px; margin:10px auto; background:rgba(128,188,90,1.00); color:#FFF; border-radius:3px; cursor:pointer}
+.record dl{border-bottom:1px dashed #5E74B0}
+.lemess{margin:10px; padding:10px}
+.lemess p{line-height:3; color:#FF0000}
+.uuu{padding:20px}
+.uuu li{width:220px; height:220px; border:1px solid #ccc; float:left; overflow:hidden; margin:10px}
+.uuu li img{width: 100%; height: 100%; object-fit: cover ;}
+.sblog{padding:10px;}
+.myCanvas{padding:10px}
+.sblog dl>*{line-height:3px; font-size:14px; line-height:3}
+.sblog dl a{color:#094382}
+.sblog dl a:hover{text-decoration:underline}
+.sblog dl dt a{font-weight:bold; color:#333333}
+.allblog{padding:10px; margin:10px}
+.allblog li{padding:10px}
+.allblog li a{font-size:14px; color:#094382}
+.allblog li i{float:right}
+.allblog li:hover{background:#DCDCDC}
+.standard{width:700px; margin:30px auto}
+.standard h1{font-size:32px; line-height:2}
+.standard>p{color:#999999}
+.standard article p{font-size:20px; line-height:3}
+
+
+.Mycenter{background:#D6E7FA; height:160px;}
+.Mycenter>div{width:800px; margin:0 auto; height:100px; padding:25px 0; display:flex}
+.Mycenter>div img{width:120px; margin-right:35px}
+.Mycenter>div dl{height:100px; position:relative}
+.Mycenter>div dl dt{color:#2e3092; font-size:20px}
+.Mycenter>div  dd{position:absolute; bottom:0}
+.Mycenter>div  dd a{padding:0 5px}
+.Mycenter>div  dd a:hover{color:red}
+.aboutme{border:1px solid #ddd; margin:20px 0}
+.grzl{background:#D6E7FA; border-bottom:1px solid #d0d0d0; height:28px; line-height:28px; padding-left:10px}
+.navgrxx{padding:20px}
+.navgrxx ul{height:25px; border-bottom:1px solid #DBDBDB; position:relative}
+.navgrxx ul li{float:left; width:80px; text-align:center; height:26px;; background:#D6E7FA; line-height:26px;}
+.navgrxx ul  li a{color:#333333}
+.navgrxx ul li.curr{background:#FFFFFF}
+.libiaoxx dl{margin:15px; padding:10px; border-bottom:1px dashed #DBDB0D}
+.libiaoxx dt{font-size:14px; font-weight:bold; line-height:3}
+.libiaoxx dd{line-height:2.8}
+.libiaoxx dd i{cursor:pointer; color:#336699}
+.libiaoxx dd i:hover{text-decoration:underline}
+.uploadimg{padding:15px; margin:15px}
+.uploadimg p{height:40px}
+.uploadimg label{position:relative}
+.uploadimg label input{display:none}
+.uploadimg label i{padding:8px 12px; margin:0 15px; background:#D4D4D4; border-radius:4px; box-shadow:2px 2px 2px #D4D4D4; color:#000; cursor:pointer}
+.uploadimg img{width:180px; display:block}
+.uploadimg button{display:block; margin:20px; padding:3px 20px}
+.blogaddr{margin:15px; padding:10px}	
+.blogaddr p{line-height:4; color:#878787}
+
+.m-form{display:block; padding:30px 0}
+.m-form>label , .m-form>div{display:block; padding:10px 0;display: -webkit-flex;display: -ms-flexbox;display: flex;
+-webkit-justify-content:flex-start;-ms-justify-content:flex-start; justify-content:flex-start;
+-webkit-align-items:center;  -ms-align-items:center;align-items:center;}
+.m-form p{width:250px; text-align:right;}
+.m-form>label input{width:250px; border:1px solid rgba(237,237,237,0.8) ; padding:8px; height:30px; border-radius:3px}
+.m-form>div label{display:inline-block; padding-right:10px}
+.m-form>div label input{margin-left:3px; position:relative; top:3px}
+.m-form  button{width:100px; display:block; margin:15px auto; border:none; background:#dd0000; color:#FFFFFF; height:30px; border-radius:5px}
+
+

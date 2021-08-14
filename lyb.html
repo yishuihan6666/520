@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>留言板</title>
+<link rel="stylesheet" href="style/css/admin.css">
+</head>
+
+<body>
+<!--头部 导航-->
+<header>
+	<ul>
+    	<li><a>登录</a></li>
+    </ul>
+</header>
+<nav class="nav">
+	<div>
+    	<h1>小黄老师的博客</h1>
+      <ul>
+        <a href="index.html">主页</a>
+          <a href="mulu.html">拽姐恋爱史</a>
+          <a href="tupian.html">特效照片墙</a>
+          <a href="my.html">关于我</a>
+          <a href="jieshao.html">我的足迹</a>
+          <a href="lyb.html" class="on">留言板</a>
+      </ul>
+    </div>
+</nav>
+<main class="clear" style="padding:20px 0">
+<section class="mainLeft">
+        <section class="leftbg">
+        <h1 class="perdata">个人资料</h1>
+        <div class="leftimg">
+            <img src="style/images/tx.jpg">
+            <h1><embed src="style/1.svg" width="35" height="35" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" /><i>黄荔</i></h1>
+            <ul>
+                <li>专业：心理学</li>
+                <li>学校：成都师范学院</li>
+                <li>入学年份：2018年</li>
+                <li>年龄：21</li>
+                <li>性别：仙女</li>
+            </ul>
+        </div>
+    </section>
+
+</section>
+    
+    
+<section class="mainRgiht">
+    <section class="rightbg">
+        <h1 class="perdata">留下档案</h1>
+       <form class="m-form">
+       		<label><p>你的帐号：</p><input type="text" placeholder="你的帐号" required></label>
+            <label><p>你的电话：</p><input type="number" placeholder="你的电话" required></label>
+            <label><p>你的邮箱：</p><input type="email" placeholder="你的邮箱" required></label>
+            <label><p>你的博客：</p><input type="url" placeholder="你的博客" required></label>
+            <label><p>日期：</p><input type="date" placeholder="日期" required></label>
+            <div>
+            	<p>性别：</p>
+            	<li>
+                    <label><i>男</i><input  type="radio" name="sex"></label>
+                    <label><i>女</i><input type="radio" name="sex"></label>
+                </li>
+            </div>
+            <div>
+            	<p>喜欢的美食类型：</p>
+                <li>
+                    <label><i>火锅</i><input type="checkbox"></label>
+                    <label><i>日料</i><input type="checkbox"></label>
+                    <label><i>韩国料理</i><input type="checkbox"></label>
+                    <label><i>泰国菜</i><input type="checkbox"></label>
+                </li>
+            </div>
+            <label><p>留言内容：</p><textarea style="width:250px; border: 1px solid rgba(237,237,237,0.8);" rows="10"></textarea></label>
+            <button type="submit">确认</button>
+       </form>
+       
+    </section>
+    <section class="rightbg">
+        <h1 class="perdata">给我留言</h1>
+       <div class="lemess">
+ 			<p>欢迎大家来给我留言！！！！</p>
+       </div>
+    </section>
+</section>
+</main>
+<!--脚底 版权-->
+<footer class="footerImg">
+    <div>
+        <p>©2021 - 版权所有 计科技1801 李阳</p>
+    </div>
+</footer>
+
+<script>
+$(document).ready(function(e) {
+    $('.record ul').click(function(e) {
+		
+        if($(this).text()=="编辑"){
+			$('.record input').prop("disabled",false);
+			$(this).text("保存");
+		}else{
+			$('.record input').prop("disabled",true);
+			$(this).text("编辑");	
+		}
+    });
+});
+</script>
+</body>
+</html>
